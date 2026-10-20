@@ -136,4 +136,27 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8992660380984191750, guid: e76854dd0fb436f47a369d5e9ada2033, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3187420569112840271}
   m_SourcePrefab: {fileID: 100100000, guid: e76854dd0fb436f47a369d5e9ada2033, type: 3}
+--- !u!1 &1572104908200295443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8992660380984191750, guid: e76854dd0fb436f47a369d5e9ada2033, type: 3}
+  m_PrefabInstance: {fileID: 7574322216899680021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3187420569112840271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572104908200295443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff1122b9b053c743b4d7a51caac3cdc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::RPGCharacterAnims.RPGCharacterAnimatorEvents
