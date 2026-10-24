@@ -281,6 +281,12 @@ MonoBehaviour:
   - name: OnAttackEnded
     time: 1
     parameter: 
+  - name: OnClawWarn
+    time: 0.05
+    parameter: 
+  - name: OnClawHit
+    time: 0.3
+    parameter: 
 --- !u!114 &1057815154188764410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -299,6 +305,9 @@ MonoBehaviour:
     parameter: 
   - name: OnAttackEnded
     time: 1
+    parameter: 
+  - name: OnShockwaveWarn
+    time: 0.1
     parameter: 
 --- !u!1102 &1102001235444895996
 AnimatorState:
@@ -1396,6 +1405,12 @@ MonoBehaviour:
   - name: OnAttackEnded
     time: 1
     parameter: 
+  - name: OnClawWarn
+    time: 0.05
+    parameter: 
+  - name: OnClawHit
+    time: 0.3
+    parameter: 
 --- !u!114 &3629865364066381462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1417,6 +1432,9 @@ MonoBehaviour:
     parameter: 
   - name: OnThrowPrepare
     time: 0.45
+    parameter: 
+  - name: OnThrowWarn
+    time: 0.1
     parameter: 
 --- !u!1101 &5135614246800490699
 AnimatorStateTransition:
