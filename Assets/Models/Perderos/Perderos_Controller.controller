@@ -44,6 +44,9 @@ MonoBehaviour:
   - name: OnClawHit
     time: 0.3
     parameter: 
+  - name: OnTrackEnd
+    time: 0.2
+    parameter: 
 --- !u!1101 &-6996988869418286343
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -141,6 +144,18 @@ MonoBehaviour:
   - name: OnAttackEnded
     time: 1
     parameter: 
+  - name: OnHit
+    time: 0.16
+    parameter: 0
+  - name: OnHit
+    time: 0.38
+    parameter: 1
+  - name: OnTrackEnd
+    time: 0.7
+    parameter: 
+  - name: OnHit
+    time: 0.74
+    parameter: 2
 --- !u!1101 &-4912818041832618209
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -305,6 +320,9 @@ MonoBehaviour:
     parameter: 
   - name: OnClawHit
     time: 0.3
+    parameter: 
+  - name: OnTrackEnd
+    time: 0.2
     parameter: 
 --- !u!1101 &-1312463468915728745
 AnimatorStateTransition:
@@ -542,6 +560,30 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: jumpSmash
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: leftTurnSmash
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: rightTurnSmash
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: hopBack
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -571,6 +613,12 @@ MonoBehaviour:
   - name: OnAttackEnded
     time: 1
     parameter: 
+  - name: OnTrackEnd
+    time: 0.4
+    parameter: 
+  - name: OnHit
+    time: 0.5
+    parameter: 
 --- !u!1102 &1102026528582169110
 AnimatorState:
   serializedVersion: 6
@@ -581,8 +629,10 @@ AnimatorState:
   m_Name: JumpSmashAttack
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_Transitions:
+  - {fileID: 4815162342108151902}
+  m_StateMachineBehaviours:
+  - {fileID: 4815162342108151903}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -659,8 +709,10 @@ AnimatorState:
   m_Name: Turn90RightSmashAttack
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_Transitions:
+  - {fileID: 4815162342108151908}
+  m_StateMachineBehaviours:
+  - {fileID: 4815162342108151909}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -985,8 +1037,10 @@ AnimatorState:
   m_Name: Turn90LeftSmashAttack
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_Transitions:
+  - {fileID: 4815162342108151905}
+  m_StateMachineBehaviours:
+  - {fileID: 4815162342108151906}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1134,6 +1188,10 @@ AnimatorState:
   - {fileID: 243616194218377765}
   - {fileID: 5359534334337377894}
   - {fileID: 6845632276095991632}
+  - {fileID: 4815162342108151901}
+  - {fileID: 4815162342108151904}
+  - {fileID: 4815162342108151907}
+  - {fileID: 4815162342108151910}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -1425,8 +1483,10 @@ AnimatorState:
   m_Name: JumpBackwards
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_Transitions:
+  - {fileID: 4815162342108151911}
+  m_StateMachineBehaviours:
+  - {fileID: 4815162342108151912}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1923,6 +1983,9 @@ MonoBehaviour:
   - name: OnClawHit
     time: 0.3
     parameter: 
+  - name: OnTrackEnd
+    time: 0.2
+    parameter: 
 --- !u!1101 &5456429672337189664
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2017,6 +2080,18 @@ MonoBehaviour:
   - name: OnAttackEnded
     time: 1
     parameter: 
+  - name: OnHit
+    time: 0.15
+    parameter: 0
+  - name: OnHit
+    time: 0.4
+    parameter: 1
+  - name: OnTrackEnd
+    time: 0.72
+    parameter: 
+  - name: OnHit
+    time: 0.76
+    parameter: 2
 --- !u!114 &7294549517461212152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2032,6 +2107,12 @@ MonoBehaviour:
   events:
   - name: OnAttackEnded
     time: 1
+    parameter: 
+  - name: OnTrackEnd
+    time: 0.4
+    parameter: 
+  - name: OnHit
+    time: 0.5
     parameter: 
 --- !u!1101 &7641683606096352276
 AnimatorStateTransition:
@@ -2102,6 +2183,9 @@ MonoBehaviour:
   - name: OnClawHit
     time: 0.3
     parameter: 
+  - name: OnTrackEnd
+    time: 0.2
+    parameter: 
 --- !u!114 &8213108588380905733
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2118,6 +2202,15 @@ MonoBehaviour:
   - name: OnAttackEnded
     time: 1
     parameter: 
+  - name: OnHit
+    time: 0.23
+    parameter: 0
+  - name: OnTrackEnd
+    time: 0.57
+    parameter: 
+  - name: OnHit
+    time: 0.63
+    parameter: 1
 --- !u!114 &8651040570104885139
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2134,6 +2227,15 @@ MonoBehaviour:
   - name: OnAttackEnded
     time: 1
     parameter: 
+  - name: OnHit
+    time: 0.25
+    parameter: 0
+  - name: OnTrackEnd
+    time: 0.55
+    parameter: 
+  - name: OnHit
+    time: 0.62
+    parameter: 1
 --- !u!1101 &9154955038765978034
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2418,7 +2520,283 @@ MonoBehaviour:
     parameter: 
   - name: OnShockwave
     time: 0.4
-    parameter: 
+    parameter:
   - name: OnAttackEnded
     time: 1
+    parameter:
+--- !u!1101 &4815162342108151901
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name:
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: jumpSmash
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102026528582169110}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.1
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &4815162342108151902
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name:
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102608418108455290}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.85
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!114 &4815162342108151903
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46e119bc76b2f7489ff2e29721aec11, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Study3D.FpsGame.AnimStateEventSender
+  events:
+  - name: OnJumpStart
+    time: 0.08
+    parameter:
+  - name: OnJumpLock
+    time: 0.3
+    parameter:
+  - name: OnTrackEnd
+    time: 0.3
+    parameter:
+  - name: OnJumpLand
+    time: 0.46
+    parameter:
+  - name: OnAttackEnded
+    time: 1
+    parameter:
+--- !u!1101 &4815162342108151904
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name:
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: leftTurnSmash
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102470379373161882}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.1
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &4815162342108151905
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name:
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102608418108455290}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.85
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!114 &4815162342108151906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46e119bc76b2f7489ff2e29721aec11, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Study3D.FpsGame.AnimStateEventSender
+  events:
+  - name: OnHit
+    time: 0.5
+    parameter:
+  - name: OnAttackEnded
+    time: 1
+    parameter:
+--- !u!1101 &4815162342108151907
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name:
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: rightTurnSmash
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102183251233113932}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.1
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &4815162342108151908
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name:
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102608418108455290}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.85
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!114 &4815162342108151909
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46e119bc76b2f7489ff2e29721aec11, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Study3D.FpsGame.AnimStateEventSender
+  events:
+  - name: OnHit
+    time: 0.5
+    parameter:
+  - name: OnAttackEnded
+    time: 1
+    parameter:
+--- !u!1101 &4815162342108151910
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: hopBack
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102892667189688614}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.1
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &4815162342108151911
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1102608418108455290}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.15
+  m_TransitionOffset: 0
+  m_ExitTime: 0.85
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!114 &4815162342108151912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46e119bc76b2f7489ff2e29721aec11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Study3D.FpsGame.AnimStateEventSender
+  events:
+  - name: OnHopStart
+    time: 0.13
+    parameter: 
+  - name: OnHopLand
+    time: 0.73
+    parameter: 
+  - name: OnHopEnded
+    time: 0.85
     parameter: 
