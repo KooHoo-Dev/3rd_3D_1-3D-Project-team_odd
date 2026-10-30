@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 482c1e313566f2349b28976e826abdd4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Aquire
+  - Orbit
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a9faac9b77314354d90f095f5e9d76cd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
