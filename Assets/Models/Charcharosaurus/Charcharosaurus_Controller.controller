@@ -66,7 +66,7 @@ MonoBehaviour:
   - time: 0.17
     sound:
       clipName: Charchar/roar
-      volume: 1
+      volume: 0.3
 --- !u!114 &-5817622553652269209
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,7 +83,7 @@ MonoBehaviour:
   - time: 0.31
     sound:
       clipName: Charchar/smash
-      volume: 0.95
+      volume: 0.15
 --- !u!114 &-4718915042760294597
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,15 +138,15 @@ MonoBehaviour:
   - time: 0.131
     sound:
       clipName: Charchar/swing_1
-      volume: 1
+      volume: 0.25
   - time: 0.392
     sound:
       clipName: Charchar/swing_2
-      volume: 1
+      volume: 0.25
   - time: 0.7
     sound:
       clipName: Charchar/smash
-      volume: 0.95
+      volume: 0.15
 --- !u!1101 &-4247853542947790506
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -210,7 +210,7 @@ MonoBehaviour:
   - time: 0.31
     sound:
       clipName: Charchar/smash
-      volume: 0.95
+      volume: 0.15
 --- !u!114 &-3482607948590972533
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,7 +227,7 @@ MonoBehaviour:
   - time: 0.17
     sound:
       clipName: Charchar/roar
-      volume: 1
+      volume: 0.3
 --- !u!114 &-3430118163282387316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -244,11 +244,11 @@ MonoBehaviour:
   - time: 0.215
     sound:
       clipName: Charchar/swing_1
-      volume: 1
+      volume: 0.25
   - time: 0.573
     sound:
       clipName: Charchar/swing_2
-      volume: 1
+      volume: 0.25
 --- !u!1101 &-3226092188109739964
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -274,6 +274,23 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-3041262529036541393
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86802dd4e8f60e9478073cde80078a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeamOdd.AnimStateSoundSender
+  sounds:
+  - time: 0.15
+    sound:
+      clipName: Charchar/growl
+      volume: 0.3
 --- !u!114 &-2551072578957498158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,7 +307,7 @@ MonoBehaviour:
   - time: 0.335
     sound:
       clipName: Charchar/swing_2
-      volume: 1
+      volume: 0.25
 --- !u!1101 &-2463099317623019312
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -594,7 +611,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6939758487690378565}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -3041262529036541393}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -650,7 +668,7 @@ MonoBehaviour:
   - time: 0.335
     sound:
       clipName: Charchar/swing_2
-      volume: 1
+      volume: 0.25
 --- !u!1101 &930678610948979773
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1133,7 +1151,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7541224241740821416}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 4128662118997187320}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1190,7 +1209,8 @@ AnimatorState:
   m_Transitions:
   - {fileID: 7151364466613658138}
   - {fileID: 1265315642143751062}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 1317572436885570460}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1288,7 +1308,7 @@ AnimatorStateMachine:
     m_Position: {x: -380, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3320599873424997558}
-    m_Position: {x: 240, y: -80, z: 0}
+    m_Position: {x: 230, y: -80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102016705614997740}
     m_Position: {x: -10, y: -150, z: 0}
@@ -1397,6 +1417,27 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &1317572436885570460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86802dd4e8f60e9478073cde80078a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeamOdd.AnimStateSoundSender
+  sounds:
+  - time: 0.2
+    sound:
+      clipName: Charchar/step
+      volume: 0.3
+  - time: 0.65
+    sound:
+      clipName: Charchar/step
+      volume: 0.15
 --- !u!1101 &1389605076125617830
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1485,7 +1526,7 @@ MonoBehaviour:
   - time: 0.31
     sound:
       clipName: Charchar/smash
-      volume: 0.95
+      volume: 0.15
 --- !u!1102 &2162933949520800292
 AnimatorState:
   serializedVersion: 6
@@ -1693,7 +1734,7 @@ MonoBehaviour:
   - time: 0.31
     sound:
       clipName: Charchar/smash
-      volume: 0.95
+      volume: 0.15
 --- !u!1101 &2864748283993067698
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1781,7 +1822,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2735322722463036873}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 5814698364466113423}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1809,7 +1851,8 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1494860619077395809}
   - {fileID: 7711911633438970567}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 5610205713014072770}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1946,11 +1989,11 @@ MonoBehaviour:
   - time: 0.201
     sound:
       clipName: Charchar/swing_1
-      volume: 1
+      volume: 0.25
   - time: 0.601
     sound:
       clipName: Charchar/swing_2
-      volume: 1
+      volume: 0.25
 --- !u!114 &4017710208688398466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2013,6 +2056,27 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &4128662118997187320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86802dd4e8f60e9478073cde80078a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeamOdd.AnimStateSoundSender
+  sounds:
+  - time: 0.65
+    sound:
+      clipName: Charchar/step
+      volume: 0.3
+  - time: 0.75
+    sound:
+      clipName: Charchar/step
+      volume: 0.15
 --- !u!1102 &4136951764502083356
 AnimatorState:
   serializedVersion: 6
@@ -2025,7 +2089,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2897417942835053807}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 8329471354553543351}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2056,15 +2121,15 @@ MonoBehaviour:
   - time: 0.151
     sound:
       clipName: Charchar/swing_1
-      volume: 1
+      volume: 0.25
   - time: 0.401
     sound:
       clipName: Charchar/swing_2
-      volume: 1
+      volume: 0.25
   - time: 0.655
     sound:
       clipName: Charchar/smash
-      volume: 0.95
+      volume: 0.15
 --- !u!114 &4443176042456286692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2249,6 +2314,27 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &5610205713014072770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86802dd4e8f60e9478073cde80078a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeamOdd.AnimStateSoundSender
+  sounds:
+  - time: 0.65
+    sound:
+      clipName: Charchar/step
+      volume: 0.3
+  - time: 0.75
+    sound:
+      clipName: Charchar/step
+      volume: 0.15
 --- !u!1101 &5726578533262243701
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2271,6 +2357,23 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &5814698364466113423
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86802dd4e8f60e9478073cde80078a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeamOdd.AnimStateSoundSender
+  sounds:
+  - time: 0.1
+    sound:
+      clipName: Charchar/groan
+      volume: 0.35
 --- !u!1101 &5935673157127989623
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2599,7 +2702,7 @@ MonoBehaviour:
   - time: 0.335
     sound:
       clipName: Charchar/swing_1
-      volume: 1
+      volume: 0.25
 --- !u!1101 &7711911633438970567
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2666,7 +2769,7 @@ MonoBehaviour:
   - time: 0.15
     sound:
       clipName: Charchar/growl
-      volume: 1
+      volume: 0.3
 --- !u!114 &7871999851118903600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2708,7 +2811,7 @@ MonoBehaviour:
   - time: 0.31
     sound:
       clipName: Charchar/smash
-      volume: 0.95
+      volume: 0.15
 --- !u!114 &8176274324404617106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2725,7 +2828,7 @@ MonoBehaviour:
   - time: 0.335
     sound:
       clipName: Charchar/swing_1
-      volume: 1
+      volume: 0.25
 --- !u!1101 &8209810915640417305
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2748,6 +2851,27 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &8329471354553543351
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86802dd4e8f60e9478073cde80078a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeamOdd.AnimStateSoundSender
+  sounds:
+  - time: 0.6
+    sound:
+      clipName: Charchar/step
+      volume: 0.3
+  - time: 0.8
+    sound:
+      clipName: Charchar/step
+      volume: 0.15
 --- !u!1101 &8370267341566056667
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
